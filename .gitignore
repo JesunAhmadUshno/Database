@@ -1,0 +1,14 @@
+# site build
+site/node_modules/
+site/dist/
+site/.rubric/
+# generated at build time from the notebook (scripts/extract.mjs)
+site/src/generated/
+site/public/figures/
+
+# Python / notebooks
+__pycache__/
+.ipynb_checkpoints/
+
+# OS noise
+.DS_Store

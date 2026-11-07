@@ -1,0 +1,19 @@
+{
+  "name": "database-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/extract.mjs && vite",
+    "test": "node scripts/extract.mjs && node src/queries.check.mjs && node src/stats.check.mjs",
+    "build": "npm test && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "vite": "6.4.5"
+  }
+}
