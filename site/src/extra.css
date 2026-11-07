@@ -1,0 +1,43 @@
+/* Site-specific additions on top of the Lab OS base (styles.css is kept verbatim). */
+.scroll-x { overflow-x: auto; }
+.null { color: var(--muted); font-style: italic; opacity: .7; }
+td.pre { white-space: pre; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; }
+
+.schema-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.tbl { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; text-align: left; font: inherit; color: var(--text); cursor: pointer; background: var(--surface-strong); border: 1px solid var(--border); border-radius: 12px; padding: 14px; transition: border-color .15s, transform .15s; }
+.tbl:hover { transform: translateY(-1px); }
+.tbl.on { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-pale); }
+.tbl b { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; }
+.tbl small { color: var(--muted); margin-top: 2px; font-size: 12px; }
+.tbl ul { width: 100%; list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 3px; font-size: 12px; }
+.tbl li { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.tbl li span { font-weight: 600; }
+.tbl li em { font-style: normal; color: var(--muted); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; }
+.k { font-style: normal; font-size: 10px; font-weight: 700; padding: 0 6px; border-radius: 999px; }
+.k.pk { color: var(--warn); background: var(--warn-bg); }
+.k.fk { color: var(--primary); background: var(--primary-pale); }
+.sorter { border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+.sorter:hover { color: var(--primary); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.chip { border: 1px solid var(--border); background: var(--surface-strong); color: var(--text); font: 600 12.5px Inter, sans-serif; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed=true] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.chip.missing { cursor: default; color: var(--warn); background: var(--warn-bg); border-style: dashed; border-color: color-mix(in srgb, var(--warn) 40%, transparent); font-weight: 600; }
+pre.sql { margin-top: 14px; background: #1b1915; color: #e9e4da; border-radius: 10px; padding: 14px 16px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+pre.sql code { background: none; color: inherit; padding: 0; font-size: 12.5px; line-height: 1.6; }
+.notes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.notes .pill { white-space: normal; }
+.linkish { border: 0; background: none; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; margin-left: 4px; }
+.result { margin-top: 12px; max-height: 420px; overflow-y: auto; }
+
+.rules { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.rule { background: var(--surface-strong); border: 1px solid var(--border); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+.rule-head { display: flex; flex-direction: column; gap: 2px; }
+.rule-head b { font-size: 12px; }
+
+.fig { margin-top: 16px; background: #fff; border-radius: 12px; padding: 12px; border: 1px solid var(--border); }
+.fig img { display: block; margin: 0 auto; max-width: 100%; width: auto; height: auto; max-height: 620px; }
+.fig figcaption { color: #6f6a61; font-size: 12.5px; margin-top: 8px; text-align: center; }
+
+@media (max-width: 900px) { .schema-grid, .rules { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .schema-grid, .rules { grid-template-columns: 1fr; } }
